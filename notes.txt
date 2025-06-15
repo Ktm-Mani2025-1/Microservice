@@ -1,0 +1,6 @@
+ktm@server:~/Desktop/Devops2025/Devopsshack$ chmod 400 "Microservices.pem.pem"
+
+ssh -i "Microservices.pem.pem" ubuntu@ec2-16-16-170-213.eu-north-1.compute.amazonaws.com
+
+
+ubuntu@ip-172-31-1-91:~$ sudo apt update
