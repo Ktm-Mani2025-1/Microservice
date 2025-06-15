@@ -13,3 +13,20 @@ unzip awscliv2.zip
 sudo ./aws/install
     5. Configure AWS CLI:
 aws configure
+
+
+Step 2: Clone the Terraform Project and Deploy EKS
+    1. Clone the Terraform project folder and navigate to it:
+git clone <terraform_project_repo>
+cd <terraform_project_folder>
+    2. Initialize Terraform:
+terraform init
+    3. Deploy the resources:
+terraform apply --auto-approve
+
+Step 3: Update kubeconfig for the EKS Cluster
+Run the following command to update the kubeconfig file with your EKS cluster details:
+aws eks --region ap-south-1 update-kubeconfig --name devopsshack-cluster
+This command retrieves the kubeconfig configuration for the devopsshack-cluster and stores it in the default kubeconfig file (e.g., ~/.kube/config).
+
+
